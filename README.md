@@ -1,6 +1,8 @@
 
 
 # Projeto DIO Bank
+Projeto realizado em Boot Camp no portal DIO - Digital Innovation One.
+Primeiramente foi replicada a solução demonstrada pelo professor para posterior customização a ser realizada pelo próprio aluno.
 
 ## Alterações realizadas no projeto :smiling_imp:
 
