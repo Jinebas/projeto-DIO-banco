@@ -42,8 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conta.cs" />
-    <Compile Include="TipoConta.cs" />
+    <Compile Include="Entities\Conta.cs" />
+    <Compile Include="Entities\Enums\TipoConta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
