@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,7 +57,7 @@ namespace DioBank
             int indiceContaDestino = int.Parse(Console.ReadLine()) - 1;
 
             Console.Write("Digite o valor a ser transferido: ");
-            double valorTransferencia = double.Parse(Console.ReadLine());
+            double valorTransferencia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             listContas[indiceContaOrigem].Transferir(valorTransferencia, listContas[indiceContaDestino]);
         }
@@ -67,7 +68,7 @@ namespace DioBank
             int indiceConta = int.Parse(Console.ReadLine()) - 1;
 
             Console.Write("Digite o valor a ser depositado: ");
-            double valorDeposito = double.Parse(Console.ReadLine());
+            double valorDeposito = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             listContas[indiceConta].Depositar(valorDeposito);
         }
@@ -78,7 +79,7 @@ namespace DioBank
             int indiceConta = int.Parse(Console.ReadLine()) - 1;
 
             Console.Write("Digite o valor a ser sacado: ");
-            double valorSaque = double.Parse(Console.ReadLine());
+            double valorSaque = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             listContas[indiceConta].Sacar(valorSaque);
         }

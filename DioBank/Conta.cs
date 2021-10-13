@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,7 +36,8 @@ namespace DioBank
             }
 
             this.Saldo -= valorSaque;
-            Console.WriteLine("Saldo atual da conta de {0} é R${1}.", Nome, Saldo);
+            Console.WriteLine("Saldo atual da conta de {0} é R${1}.", 
+                                Nome, Saldo.ToString("F2", CultureInfo.InvariantCulture));
             return true;
         }
 
@@ -43,7 +45,8 @@ namespace DioBank
         {
             Saldo += valorDeposito;
 
-            Console.WriteLine("Saldo atual da conta de {0} é de R${1}.", Nome, Saldo);
+            Console.WriteLine("Saldo atual da conta de {0} é de R${1}.",
+                                Nome, Saldo.ToString("F2", CultureInfo.InvariantCulture));
         }
 
         public void Transferir(double valorTransferencia, Conta contaDestino)
@@ -54,13 +57,11 @@ namespace DioBank
 
         public override string ToString()
         {
-            string retorno = "";
-            retorno += "TipoConta " + this.TipoConta + " | ";
-            retorno += "Nome " + this.Nome + " | ";
-            retorno += "saldo " + this.Saldo + " | ";
-            retorno += "Credito " + this.Credito;
-            return retorno;
-            
+            return "Número de Conta: " + Id + " | Conta: " + TipoConta
+                + "\n" + "Nome: " + Nome
+                + "\n" + "Saldo: " + Saldo.ToString("F2", CultureInfo.InvariantCulture)
+                + "\n" + "Credito: " + Credito.ToString("F2", CultureInfo.InvariantCulture);
+
         }
 
     }
