@@ -8,14 +8,18 @@ namespace DioBank
 {
     class Conta
     {
+        /* Inserido novo atributo "Id" para a classe. Foram realizadas as devidas adequações no construtor e nos 
+        métodos relacionados */
+        public int Id { get; private set; }
         public TipoConta TipoConta { get; private set; }
 
         public string Nome{ get; private set; }
         public double Saldo { get; private set; }
         public double Credito{ get; private set; }
 
-        public Conta(TipoConta tipoConta, string nome, double saldo, double credito)
+        public Conta(int id, TipoConta tipoConta, string nome, double saldo, double credito)
         {
+            this.Id = id;
             this.TipoConta = tipoConta;
             this.Nome = nome;
             this.Saldo = saldo;
